@@ -1,9 +1,16 @@
-<h1>Send a Tweet</h1>
+<div class="jumbotron">
+  <div class="page-header">
+    <h1>Send a Tweet</h1>
+  <div>
 
-
-<% if !current_user.nil? %>
-    <p>Click The link below to send a tweet.</p>
-    <%= link_to "Send a Tweet", new_tweet_path %>
-<% else %>
-    <p>You must log in to send a tweet.</p>
-<% end %>
+  <% if !current_user.nil? %>
+    <div class="alert alert-success" role="alert">
+      <p>Click The link below to send a tweet.</p>
+      <%= link_to "Send a Tweet", new_tweet_path %>
+    </div>
+  <% else %>
+    <div class="alert alert-warning" role="alert">
+        You must log in to send a tweet.
+    </div>
+  <% end %>
+</div>
