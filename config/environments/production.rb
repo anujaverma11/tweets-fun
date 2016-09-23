@@ -4,7 +4,8 @@ Rails.application.configure do  config.cache_classes = true
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  config.assets.js_compressor = :uglifier  config.assets.compile = false
+  config.assets.js_compressor = :uglifier
+  config.assets.compile = false
   config.assets.digest = true
   config.log_level = :debug
   config.i18n.fallbacks = true
